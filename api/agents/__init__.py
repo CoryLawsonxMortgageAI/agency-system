@@ -1,0 +1,23 @@
+"""Agent definitions for Agency Management System."""
+
+from .agent_definitions import (
+    AGENT_DEFINITIONS,
+    AGENT_BY_ID,
+    ENGINEERING_AGENTS,
+    MARKETING_AGENTS,
+    PRODUCT_AGENTS,
+    TESTING_AGENTS,
+    SUPPORT_AGENTS,
+    SPECIALIZED_AGENTS
+)
+
+__all__ = [
+    "AGENT_DEFINITIONS",
+    "AGENT_BY_ID",
+    "ENGINEERING_AGENTS",
+    "MARKETING_AGENTS",
+    "PRODUCT_AGENTS",
+    "TESTING_AGENTS",
+    "SUPPORT_AGENTS",
+    "SPECIALIZED_AGENTS"
+]
