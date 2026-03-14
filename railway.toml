@@ -1,0 +1,22 @@
+# Railway Deployment Configuration for Agency System
+# https://railway.app
+
+[build]
+builder = "NIXPACKS"
+
+[build.nixpacks]
+# Use Python 3.11
+python_version = "3.11"
+# Install gcc for any compiled dependencies
+apt_pkgs = ["gcc", "libpq-dev"]
+
+[deploy]
+startCommand = "python railway_entrypoint.py"
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[deploy.resources]
+cpu = 2
+memory = "2Gi"
